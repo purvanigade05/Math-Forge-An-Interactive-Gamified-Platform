@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Forge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logoIcon">∑</div>
+            <span>Math Forge</span>
+        </div>
+        <div class="navlinks">
+            <button class="active" onclick="showSection('home',this)">Home</button>
+            <button onclick="showSection('learn',this)">Learn</button>
+            <button onclick="showSection('challenge',this)">Challenges</button>
+            <button onclick="showSection('achievements',this)">Achievements</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section active">
+            <div class="hero">
+                <span class="tagline">Learn • Solve • Analyse • Improve</span>
+                <h1>Math Forge</h1>
+                <p>A gamified mathematical learning platform where concepts become challenges. Learn the theory, practise through progressively difficult problems, receive instant solutions and analyse your performance.</p>
+                <br>
+                <button class="primary" onclick="showSection('challenge',document.querySelectorAll('.navlinks button')[2])">Explore Challenges</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><strong>90</strong><span>Total Questions</span></div>
+                <div class="stat"><strong>9</strong><span>Challenge Zones</span></div>
+                <div class="stat"><strong>3</strong><span>Core Topics</span></div>
+                <div class="stat"><strong>1000+</strong><span>Available XP</span></div>
+            </div>
+
+            <div class="card" style="margin-top:35px">
+                <h2>How It Works</h2>
+                <ol class="howList">
+                    <li>Study the concepts in the Learn section.</li>
+                    <li>Choose a topic and difficulty level.</li>
+                    <li>Solve each question individually.</li>
+                    <li>Submit your answer.</li>
+                    <li>Immediately view the correct answer and solution.</li>
+                    <li>Complete the selected challenge.</li>
+                    <li>Review your detailed performance analysis.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="learn" class="section">
+            <div class="hero">
+                <h2>Learn the Concepts</h2>
+                <p>Build your mathematical foundation before entering the challenges.</p>
+            </div>
+            <div class="learnGrid">
+                <div class="concept">
+                    <h2>01. Permutations</h2>
+                    <p>A permutation is an arrangement of objects where order matters.</p>
+                    <h3>Factorial</h3>
+                    <div class="formula">n! = n × (n−1) × ... × 1</div>
+                    <h3>Formula</h3>
+                    <div class="formula">nPr = n! / (n−r)!</div>
+                    <h3>Example</h3>
+                    <div class="formula">5P3 = 5 × 4 × 3 = 60</div>
+                    <h3>Applications</h3>
+                    <ul><li>Arrangement</li><li>Ranking</li><li>Passwords</li><li>Position assignment</li><li>Scheduling</li></ul>
+                    <div class="formula">ORDER MATTERS → PERMUTATION</div>
+                </div>
+
+                <div class="concept">
+                    <h2>02. Combinations</h2>
+                    <p>A combination represents a selection in which order does not matter.</p>
+                    <h3>Formula</h3>
+                    <div class="formula">nCr = n! / [r!(n−r)!]</div>
+                    <h3>Example</h3>
+                    <div class="formula">8C3 = 8! / (3!5!) = 56</div>
+                    <h3>Important Identity</h3>
+                    <div class="formula">nCr = nC(n−r)</div>
+                    <h3>Applications</h3>
+                    <ul><li>Team selection</li><li>Subset selection</li><li>Probability</li><li>Feature selection</li><li>Test-case selection</li></ul>
+                    <div class="formula">ORDER DOES NOT MATTER → COMBINATION</div>
+                </div>
+
+                <div class="concept">
+                    <h2>03. Restricted Arrangements</h2>
+                    <p>Advanced problems may require objects to stay together, remain separated or occupy specific positions.</p>
+                    <h3>Block Method</h3>
+                    <div class="formula">[AB], C, D, E</div>
+                    <p>Treat A and B as a single block when they must stay together.</p>
+                    <h3>Complement Method</h3>
+                    <div class="formula">Required = Total − Unwanted</div>
+                    <h3>Common Restrictions</h3>
+                    <ul><li>Must be together</li><li>Cannot be together</li><li>No two adjacent</li><li>Fixed position</li><li>At least</li><li>At most</li></ul>
+                </div>
+
+                <div class="concept">
+                    <h2>04. Recurrence Relations</h2>
+                    <p>A recurrence relation defines a sequence using one or more previously calculated terms.</p>
+                    <div class="formula">aₙ = f(aₙ₋₁, aₙ₋₂, ...)</div>
+                    <h3>Example</h3>
+                    <div class="formula">a₀ = 2<br>aₙ = aₙ₋₁ + 3</div>
+                    <div class="formula">a₁ = 5<br>a₂ = 8<br>a₃ = 11<br>a₄ = 14</div>
+                    <h3>Order</h3>
+                    <p>The order depends on the furthest previous term required by the relation.</p>
+                </div>
+
+                <div class="concept">
+                    <h2>05. Recurrence and Algorithms</h2>
+                    <p>Recurrence relations describe recursive and divide-and-conquer algorithms.</p>
+                    <h3>Example</h3>
+                    <div class="formula">T(n) = 2T(n/2) + n</div>
+                    <h3>Expansion</h3>
+                    <div class="formula">T(n) = 2T(n/2)+n<br>= 4T(n/4)+2n<br>= 8T(n/8)+3n</div>
+                    <p>The total complexity is O(n log n) for this recurrence.</p>
+                    <h3>Applications</h3>
+                    <ul><li>Merge Sort</li><li>Binary Search</li><li>Recursive algorithms</li><li>Complexity analysis</li><li>Dynamic programming</li></ul>
+                </div>
+
+                <div class="concept">
+                    <h2>06. Problem-Solving Strategy</h2>
+                    <h3>Step 1 — Understand</h3>
+                    <p>Identify exactly what the problem asks.</p>
+                    <h3>Step 2 — Identify the structure</h3>
+                    <p>Determine whether it involves arrangement, selection, restrictions or previous terms.</p>
+                    <h3>Step 3 — Select the method</h3>
+                    <div class="formula">Arrangement → Permutation<br>Selection → Combination<br>Previous terms → Recurrence</div>
+                    <h3>Step 4 — Calculate</h3>
+                    <p>Substitute values carefully and simplify.</p>
+                    <h3>Step 5 — Verify</h3>
+                    <p>Check restrictions and make sure cases are not counted twice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenge" class="section">
+            <div class="challengeIntro">
+                <h2>Challenges</h2>
+                <p>Choose a topic and difficulty level. Each challenge contains 10 questions.</p>
+            </div>
+
+            <div class="challengeGroups">
+                <div class="topicGroup">
+                    <h3>Permutations</h3>
+                    <button class="challengeButton" onclick="startChallenge('permEasy')"><strong>Easy</strong><span>Fundamentals and direct applications</span></button>
+                    <button class="challengeButton" onclick="startChallenge('permModerate')"><strong>Moderate</strong><span>Restrictions and combined arrangements</span></button>
+                    <button class="challengeButton" onclick="startChallenge('permHard')"><strong>Difficult</strong><span>Multi-step and advanced arrangements</span></button>
+                </div>
+
+                <div class="topicGroup">
+                    <h3>Combinations</h3>
+                    <button class="challengeButton" onclick="startChallenge('combEasy')"><strong>Easy</strong><span>Basic selection problems</span></button>
+                    <button class="challengeButton" onclick="startChallenge('combModerate')"><strong>Moderate</strong><span>Conditional selections</span></button>
+                    <button class="challengeButton" onclick="startChallenge('combHard')"><strong>Difficult</strong><span>Restrictions and case analysis</span></button>
+                </div>
+
+                <div class="topicGroup">
+                    <h3>Recurrence Relations</h3>
+                    <button class="challengeButton" onclick="startChallenge('recEasy')"><strong>Easy</strong><span>Sequence calculation and basics</span></button>
+                    <button class="challengeButton" onclick="startChallenge('recModerate')"><strong>Moderate</strong><span>Recurrence expansion and patterns</span></button>
+                    <button class="challengeButton" onclick="startChallenge('recHard')"><strong>Difficult</strong><span>Algorithmic recurrence analysis</span></button>
+                </div>
+            </div>
+
+            <div id="challengeArea" class="challengeArea">
+                <div id="challengeTitle" class="challengeTitle"></div>
+                <div class="testHeader">
+                    <div>
+                        <div class="testStats">
+                            <div class="testStat">Score: <strong id="score">0</strong></div>
+                            <div class="testStat">Submitted: <strong id="submitted">0/10</strong></div>
+                            <div class="testStat">XP: <strong id="xp">0</strong></div>
+                        </div>
+                        <div class="progressOuter"><div class="progressInner" id="progress"></div></div>
+                    </div>
+                </div>
+                <div id="questionsContainer"></div>
+                <div class="finishArea" id="finishArea">
+                    <h2>Complete the Challenge</h2>
+                    <p>Submit every question to unlock your detailed analysis.</p>
+                    <button class="primary" id="analysisBtn" onclick="showAnalysis()" disabled>View Detailed Analysis</button>
+                </div>
+                <div class="analysis" id="analysis"></div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="hero">
+                <h2>Achievements</h2>
+                <p>Complete challenges and unlock achievements based on your performance.</p>
+            </div>
+            <div class="achievements">
+                <div class="badge" id="badgeFirst"><div class="badgeIcon">🚀</div><h3>First Step</h3><p>Submit your first answer.</p></div>
+                <div class="badge" id="badgeFive"><div class="badgeIcon">⚡</div><h3>Momentum</h3><p>Solve five questions correctly.</p></div>
+                <div class="badge" id="badgeAll"><div class="badgeIcon">🏆</div><h3>Challenge Complete</h3><p>Complete a challenge.</p></div>
+                <div class="badge" id="badgeHard"><div class="badgeIcon">🔥</div><h3>Difficult Mode</h3><p>Solve three difficult questions correctly.</p></div>
+                <div class="badge" id="badge80"><div class="badgeIcon">💎</div><h3>Mathematical Elite</h3><p>Achieve at least 80% accuracy.</p></div>
+                <div class="badge" id="badgePerfect"><div class="badgeIcon">👑</div><h3>Perfect Score</h3><p>Score 100% in a challenge.</p></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>Math Forge • Interactive Mathematical Learning Platform</footer>
+    <script src="script.js"></script>
+</body>
+</html>
